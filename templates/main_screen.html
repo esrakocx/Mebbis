@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+  <title>Ana Menü</title>
+</head>
+<body>
+  <nav>
+    <div class="container">
+        <input id="responsive-menu" type="checkbox">
+        <label for="responsive-menu">Menü <span id="menu-icon"></span></label>
+        <div id="overlay"></div>
+        <ul>
+            <li><a href="/bilgi">Personel Bilgisayar Bilgileri</a></li>
+            <li><a href="/yazici">Yazıcı Tanımla</a></li>
+            <li><a href="/cihaz">Cihaz Tanımla</a></li>
+            <li><a href="/ad">Ad Kullanıcı Listesi</a></li>
+            <li><a href="/ag_bilgileri">Ağ Bilgileri Sorgulama</a></li>
+            <li><a href="/hakkinda">Hakkında</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <h1>MEBBİS'e Hoşgeldiniz...</h1>
+        <p>Personel Bilgisayar Bilgileri Sorgulama,</p>
+        <p>Yazıcı Tanımlama,</p>
+        <p>Cihaz Tanımlama,</p>
+        <p>Ad Kullanıcı Listesi Listeleme,</p>
+        <p>Ağ Bilgileri Sorgulama,</p>
+        <p>Personel Bilgisayar Bilgileri,</p>
+        <p>gibi işlemlerinizi <a href="https://kayseri.meb.gov.tr/">Kayseri İl Milli Müdürlüğü</a> için <a href="https://www.linkedin.com/in/esrakocx/">Esra Koç</a> tarafından tasarlanan bu Mebbis sistemi aracılığı ile yapabilirsiniz.</p>
+    </div>
+</main>
+</body>
+</html>

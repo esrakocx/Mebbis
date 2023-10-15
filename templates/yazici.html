@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style4.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Yazıcı Tanımla</title>
+</head>
+<body>
+    <div class="form-container">
+    <h2>Yazıcı Tanımla</h2>
+    <form action="/ekle" method="post">
+        <div class="row">
+            <div class="col">
+                <label for="Yazici_No">Yazıcı No:</label>
+                <input type="text" id="Yazici_No" name="Yazici_No"><br><br>
+
+                <label for="Sube_Birim_Personel">Şube/Birim/Personel:</label>
+                <input type="text" id="Sube_Birim_Personel" name="Sube_Birim_Personel"><br><br>
+
+                <label for="Marka_Model">Marka/Model:</label>
+                <input type="text" id="Marka_Model" name="Marka_Model"><br><br>
+
+                <label for="Yazici_Adi">Yazıcı Adı:</label>
+                <input type="text" id="Yazici_Adi" name="Yazici_Adi"><br><br>
+            </div>
+            <div class="col">
+                <label for="Baglanti">Bağlantı:</label>
+                <input type="text" id="Baglanti" name="Baglanti"><br><br>
+
+                <label for="IP_No">IP Adresi:</label>
+                <input type="text" id="IP_No" name="IP_No"><br><br>
+
+                <label for="Kabinet_No">Kabinet:</label>
+                <input type="text" id="Kabinet_No" name="Kabinet_No"><br><br>
+
+                <label for="Switch_No">Switch:</label>
+                <input type="text" id="Switch_No" name="Switch_No"><br><br>
+
+                <label for="Port_No">Port No:</label>
+                <input type="text" id="Port_No" name="Port_No"><br><br>
+            </div>
+        </div>
+        <input type="submit" value="Ekle">
+    </form>
+</div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Yazıcı No</th>
+                        <th>Şube/Birim/Personel</th>
+                        <th>Marka/Model</th>
+                        <th>Yazıcı Adı</th>
+                        <th>Bağlantı</th>
+                        <th>IP Adresi</th>
+                        <th>Kabinet</th>
+                        <th>Switch</th>
+                        <th>Port No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for yazici in yazicilar %}
+                        <tr>
+                            <td>{{ yazici['Yazici_No'] }}</td>
+                            <td>{{ yazici['Sube_Birim_Personel'] }}</td>
+                            <td>{{ yazici['Marka_Model'] }}</td>
+                            <td>{{ yazici['Yazici_Adi'] }}</td>
+                            <td>{{ yazici['Baglanti'] }}</td>
+                            <td>{{ yazici['IP_No'] }}</td>
+                            <td>{{ yazici['Kabinet_No'] }}</td>
+                            <td>{{ yazici['Switch_No'] }}</td>
+                            <td>{{ yazici['Port_No'] }}</td>
+                            <td>
+                                <a href="/guncelle/{{ yazici['Yazici_No'] }}">Güncelle</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personel Bilgisayar Bilgileri</title>
+    <script src="{{ url_for('static', filename='jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='dataTables.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dataTables.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+    <table id="duzenlenmisveriler2" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Patch Kort No</th>
+                <th>Patch No</th>
+                <th>Kabinet No</th>
+                <th>Switch No</th>
+                <th>Switch Port No</th>
+                <th>Kat</th>
+                <th>Oda Numarası</th>
+                <th>Oda Adı</th>
+                <th>Cihaz Kullanıcı Adı Soyadı</th>
+                <th>Cihaz Adı Bilgisayar Adı</th>
+                <th>IP No</th>
+                <th>MAC Adresi</th>
+                <th>Yazıcı Marka Model</th>
+                <th>Ad Soyad</th>
+                <th>Çalıştığı Birim</th>
+                <th>Sehir</th>
+                <th>Eklenme Tarihi</th>
+                <th>Mebbis Yönetici</th>
+                <th>E-mail</th>
+                <th>Şifre</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for personel in bilgiler %}
+                <tr>
+                    <td>{{ personel['Patch_Kort_No'] }}</td>
+                    <td>{{ personel['Patch_No'] }}</td>
+                    <td>{{ personel['Kabinet_No'] }}</td>
+                    <td>{{ personel['Switch_No'] }}</td>
+                    <td>{{ personel['Switch_Port_No'] }}</td>
+                    <td>{{ personel['Kat'] }}</td>
+                    <td>{{ personel['Oda_No'] }}</td>
+                    <td>{{ personel['Oda_Adi'] }}</td>
+                    <td>{{ personel['Cihaz_Kullanici_Adi_Soyadi'] }}</td>
+                    <td>{{ personel['Cihaz_Adi_Bilgisayar_Adi'] }}</td>
+                    <td>{{ personel['IP_No'] }}</td>
+                    <td>{{ personel['MAC_Adresi'] }}</td>
+                    <td>{{ personel['Yazici_Marka_Model'] }}</td>
+                    <td>{{ personel['Ad_Soyad'] }}</td>
+                    <td>{{ personel['Calistigi_Birim'] }}</td>
+                    <td>{{ personel['Sehir'] }}</td>
+                    <td>{{ personel['Eklenme_Tarihi'] }}</td>
+                    <td>{{ personel['Mebbis_Yonetici'] }}</td>
+                    <td>{{ personel['Email'] }}</td>
+                    <td>{{ personel['Password'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>                
+                <th>Patch Kort No</th>
+                <th>Patch No</th>
+                <th>Kabinet No</th>
+                <th>Switch No</th>
+                <th>Switch Port No</th>
+                <th>Kat</th>
+                <th>Oda Numarası</th>
+                <th>Oda Adı</th>
+                <th>Cihaz Kullanıcı Adı Soyadı</th>
+                <th>Cihaz Adı Bilgisayar Adı</th>
+                <th>IP No</th>
+                <th>MAC Adresi</th>
+                <th>Yazıcı Marka Model</th>
+                <th>Ad Soyad</th>
+                <th>Çalıştığı Birim</th>
+                <th>Sehir</th>
+                <th>Eklenme Tarihi</th>
+                <th>Mebbis Yönetici</th>
+                <th>E-mail</th>
+                <th>Şifre</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#duzenlenmisveriler2').DataTable();
+        });
+    </script>
+
+</body>
+</html>

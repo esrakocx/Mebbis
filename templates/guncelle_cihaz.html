@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cihaz Güncelleme</title>
+</head>
+<body>
+    <h2>Cihaz Güncelleme</h2>
+    <form action="/guncelle_cihaz/{{ cihaz['Sira_No'] }}" method="post">
+        <div class="row">
+            <div class="col">
+                <label for="Sira_No">Cihaz No:</label>
+                <input type="text" id="Sira_No" name="Sira_No" value="{{ cihaz['Sira_No'] }}"><br><br>
+
+                <label for="Kat_Numara">Kat No:</label>
+                <input type="text" id="Kat_Numara" name="Kat_Numara" value="{{ cihaz['Kat_Numara'] }}"><br><br>
+
+                <label for="Kabinet_No">Kabinet No:</label>
+                <input type="text" id="Kabinet_No" name="Kabinet_No" value="{{ cihaz['Kabinet_No'] }}"><br><br>
+
+                <label for="Switch_No">Switch No:</label>
+                <input type="text" id="Switch_No" name="Switch_No" value="{{ cihaz['Switch_No'] }}"><br><br>
+            </div>
+            <div class="col">
+                <label for="Switch_Port_No">Switch Port No:</label>
+                <input type="text" id="Switch_Port_No" name="Switch_Port_No" value="{{ cihaz['Switch_Port_No'] }}"><br><br>
+
+                <label for="Cihaz_Name">Cihaz Adı:</label>
+                <input type="text" id="Cihaz_Name" name="Cihaz_Name" value="{{ cihaz['Cihaz_Name'] }}"><br><br>
+
+                <label for="Switch_Turu">Switch Türü:</label>
+                <input type="text" id="Switch_Turu" name="Switch_Turu" value="{{ cihaz['Switch_Turu'] }}"><br><br>
+
+                <label for="Marka">Marka:</label>
+                <input type="text" id="Marka" name="Marka" value="{{ cihaz['Marka'] }}"><br><br>
+
+                <label for="Seri_No">Seri No:</label>
+                <input type="text" id="Seri_No" name="Seri_No" value="{{ cihaz['Seri_No'] }}"><br><br>
+
+                <label for="IP_No">IP No:</label>
+                <input type="text" id="IP_No" name="IP_No" value="{{ cihaz['IP_No'] }}"><br><br>
+
+                <label for="Aciklama">Açıklama:</label>
+                <input type="text" id="Aciklama" name="Aciklama" value="{{ cihaz['Aciklama'] }}"><br><br>
+
+                <label for="MAC_Adresi">MAC Adresi:</label>
+                <input type="text" id="MAC_Adresi" name="MAC_Adresi" value="{{ cihaz['MAC_Adresi'] }}"><br><br>
+            </div>
+        </div>
+        <input type="submit" value="Güncelle">
+    </form>
+</body>
+</html>

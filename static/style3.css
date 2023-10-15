@@ -1,0 +1,26 @@
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+.update-button {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #d3d3d3;
+    color: #0b0b0b;
+    font: 16px/1.25 'Raleway', sans-serif;
+}

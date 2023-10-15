@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style4.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Kullanıcı Güncelle</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Kullanıcı Bilgilerini Güncelle</h2>
+        <form action="/guncelle_kullanici/{{ kullanici['Sira_No'] }}" method="post">
+            <div class="row">
+                <div class="col">
+                    <label for="IL_Adi">İl Adı:</label>
+                    <input type="text" id="IL_Adi" name="IL_Adi" value="{{ kullanici['IL_Adi'] }}"><br><br>
+
+                    <label for="Adi_Soyadi">Ad Soyad:</label>
+                    <input type="text" id="Adi_Soyadi" name="Adi_Soyadi" value="{{ kullanici['Adi_Soyadi'] }}"><br><br>
+
+                    <label for="Calistigi_Birim">Çalıştığı Birim:</label>
+                    <input type="text" id="Calistigi_Birim" name="Calistigi_Birim" value="{{ kullanici['Calistigi_Birim'] }}"><br><br>
+                </div>
+                <div class="col">
+                    <label for="MAC_Adresi">MAC Adresi:</label>
+                    <input type="text" id="MAC_Adresi" name="MAC_Adresi" value="{{ kullanici['MAC_Adresi'] }}"><br><br>
+
+                    <label for="IP_No">IP Adresi:</label>
+                    <input type="text" id="IP_No" name="IP_No" value="{{ kullanici['IP_No'] }}"><br><br>
+
+                    <label for="Calisma_Durumu">Çalışma Durumu:</label>
+                    <input type="text" id="Calisma_Durumu" name="Calisma_Durumu" value="{{ kullanici['Calisma_Durumu'] }}"><br><br>
+                </div>
+            </div>
+            <input type="submit" value="Güncelle">
+        </form>
+    </div>
+</body>
+</html>
